@@ -17,20 +17,22 @@ function App() {
         <h1 className="wordmark">Snaps</h1>
       </header>
       <main>
+        <Filters />
         <h3 className="">Our mission:</h3>
         <h2 className="title">
           Provide photographers a space o share photos of the naighbourhoods
           they cherish,{" "}
-          <span className="italic">expressed in their unique style.</span>
+          <span className="title__i">expressed in their unique style.</span>
         </h2>
-        <Filters />
-        <ul>
-          {photoData.map((photo) => (
-            <li key={photo.id}>
-              <Card photo={photo} />
-            </li>
-          ))}
-        </ul>
+        <section className="photos">
+          <ul>
+            {photoData.map((photo) => (
+              <li key={photo.id}>
+                <Card photo={photo} />
+              </li>
+            ))}
+          </ul>
+        </section>
       </main>
       <footer>
         <h1 className="wordmark">Snaps</h1>

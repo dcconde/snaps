@@ -3,6 +3,8 @@
 @use "/src/styles/partials/variables" as *;
 
 .filters {
+  padding: 0 1rem;
+  font-family: "Outfit";
   background-color: $secondary2;
 
   &__list {
