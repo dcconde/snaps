@@ -1,5 +1,35 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .title {
   font-size: 3.25rem;
   font-weight: lighter;
   font-style: normal;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filters-btn {
+  font-family: "Outfit";
+  color: $primary2;
+  background-color: $primary3;
+  padding: 0 0.75rem;
+  border-radius: 2rem;
+  border: 2px solid $primary2;
+}
+
+img {
+  width: 16px;
+  height: 16px;
 }

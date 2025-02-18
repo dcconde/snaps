@@ -3,11 +3,25 @@
 @use "../../styles/partials/mixins" as *;
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: $secondary2;
   border-radius: 1rem;
   border: 1px solid $secondary1;
   max-width: 25rem;
   margin: 1rem 0;
+
+  @include tablet {
+    max-width: 40%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    max-width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
   &__photo {
     width: 100%;

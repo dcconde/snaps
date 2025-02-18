@@ -6,7 +6,7 @@ import pinLogo from "../../assets/images/Pinterest.svg";
 
 function Footer() {
   return (
-    <section className="footer">
+    <footer>
       <h1 className="title">Snaps</h1>
       <div className="footer__container">
         <div>
@@ -46,7 +46,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 
