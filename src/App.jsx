@@ -7,15 +7,14 @@ import pinLogo from "./assets/images/Pinterest.svg";
 import Card from "./components/Card/Card";
 import photoData from "./data/photos.json";
 import Filters from "./components/Filters/Filters";
+import Header from "./components/Header/Header";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <header>
-        <h1 className="wordmark">Snaps</h1>
-      </header>
+      <Header />
       <main>
         <Filters />
         <h3 className="">Our mission:</h3>
