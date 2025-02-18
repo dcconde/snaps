@@ -7,13 +7,16 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [filterMenuIsOpen, setFilterMenuIsOpen] = useState(false);
 
   return (
     <>
-      <Header />
+      <Header
+        filterMenuIsOpen={filterMenuIsOpen}
+        setFilterMenuIsOpen={setFilterMenuIsOpen}
+      />
       <main>
-        <Filters />
+        <Filters filterMenuIsOpen={filterMenuIsOpen} />
         <h3 className="">Our mission:</h3>
         <h2 className="title">
           Provide photographers a space o share photos of the naighbourhoods

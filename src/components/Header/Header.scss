@@ -20,16 +20,27 @@ header {
   align-items: center;
 }
 
-.filters-btn {
+.filters-btn.closed {
   font-family: "Outfit";
   color: $primary2;
   background-color: $primary3;
-  padding: 0 0.75rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   border: 2px solid $primary2;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filters-btn.open {
+  font-family: "Outfit";
+  color: $secondary3;
+  background-color: $primary2;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid $primary2;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
-  width: 16px;
-  height: 16px;
+  width: 0.75rem;
+  height: 0.75rem;
 }
