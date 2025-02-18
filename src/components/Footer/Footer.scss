@@ -1,0 +1,33 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.title {
+  font-size: 3.25rem;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.text {
+  font-family: "Outfit";
+  color: $primary1;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
