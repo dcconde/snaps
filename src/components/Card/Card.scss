@@ -1,0 +1,43 @@
+@use "/src/styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.card {
+    background-color: $secondary2; 
+    border-radius: 12px;
+    padding: 16px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    &__img {
+    width: 100%;
+    border-radius: 8px;
+    }
+  
+    &__content {
+      padding: 12px 0;
+    }
+  
+    &__title {
+      font-weight: bold;
+      text-align: right;
+      background-color: white;
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: flex;
+    }
+  }
+  
+  .tag-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .tag {
+    background-color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
