@@ -3,13 +3,15 @@ import "./Card.scss";
 function Card({ photo }) {
   return (
     <article className="card">
-      <img className="photo" src={photo.photo} />
+      <img className="card_photo" src={photo.photo} />
       <div className="photographer-container">
         <h3 className="photographer">{photo.photographer}</h3>
       </div>
       <div className="tags-container">
         {photo.tags.map((tag) => (
-          <h3 key={tag}>{tag}</h3>
+          <h3 clasName="tag" key={tag}>
+            {tag}
+          </h3>
         ))}
       </div>
     </article>

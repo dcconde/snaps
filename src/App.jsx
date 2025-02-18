@@ -4,7 +4,7 @@ import fbLogo from "./assets/images/Facebook.svg";
 import instaLogo from "./assets/images/Instagram.svg";
 import xLogo from "./assets/images/X_twitter.svg";
 import pinLogo from "./assets/images/Pinterest.svg";
-import Card from "./components/Card";
+import Card from "./components/Card/Card";
 import photoData from "./data/photos.json";
 import Filters from "./components/Filters/Filters";
 
