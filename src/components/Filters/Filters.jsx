@@ -1,16 +1,19 @@
 import filtersData from "../../data/tags.json";
 import "./Filters.scss";
 
-function Filters({ filterMenuIsOpen }) {
+function Filters({ activeFilter, setActiveFilter }) {
   return (
-    <section
-      className="filters"
-      style={{ display: filterMenuIsOpen ? "block" : "none" }}
-    >
+    <section className="filters">
       <h2 className="filters__title">Filters</h2>
       <ul className="filters__list">
         {filtersData.map((filter) => (
-          <li className="filters__item" key={filter}>
+          <li
+            className={`filters__item ${
+              activeFilter === filter ? "filters__item--active" : ""
+            }`}
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+          >
             {filter}
           </li>
         ))}
