@@ -5,11 +5,12 @@ import Card from "../Card/Card";
 
 function PhotoList({ activeFilter }) {
   const [photos, setPhotos] = useState([]);
+  const api_key = "api_key=13273d8d-5377-423f-a5e5-50a3b0904a29";
 
   const getPhotos = async () => {
     try {
       const response = await axios.get(
-        "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=13273d8d-5377-423f-a5e5-50a3b0904a29"
+        `https://unit-3-project-c5faaab51857.herokuapp.com/photos?${api_key}`
       );
       // console.log(response.data);
       setPhotos(response.data);
