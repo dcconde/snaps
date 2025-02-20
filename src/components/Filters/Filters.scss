@@ -24,7 +24,8 @@
     font-weight: 400;
     line-height: 1rem;
 
-    &--active {
+    &--active,
+    &:hover {
       color: $secondary3;
       background-color: $primary2;
     }

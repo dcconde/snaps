@@ -1,9 +1,11 @@
-import "./App.scss";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import SinglePhotoPage from "./pages/SinglePhotoPage/SinglePhotoPage";
 import { useState } from "react";
 import Filters from "./components/Filters/Filters";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import PhotoList from "./components/PhotoList/PhotoList";
+import "./App.scss";
 
 function App() {
   const [filterMenuIsOpen, setFilterMenuIsOpen] = useState(false);
