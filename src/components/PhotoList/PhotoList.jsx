@@ -1,12 +1,35 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./PhotoList.scss";
 import Card from "../Card/Card";
-import photoData from "../../data/photos.json";
 
 function PhotoList({ activeFilter }) {
-  let filteredPhotoList = photoData;
+  const [photos, setPhotos] = useState([]);
+
+  const getPhotos = async () => {
+    try {
+      const response = await axios.get(
+        "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=13273d8d-5377-423f-a5e5-50a3b0904a29"
+      );
+      // console.log(response.data);
+      setPhotos(response.data);
+    } catch (error) {
+      console.error("Error fetching photos:", error);
+    }
+  };
+
+  useEffect(() => {
+    getPhotos();
+  }, []);
+
+  if (photos.length === 0) {
+    return <p>Loading Photos...</p>;
+  }
+
+  let filteredPhotoList = photos;
 
   if (activeFilter !== "") {
-    filteredPhotoList = photoData.filter((photo) =>
+    filteredPhotoList = photos.filter((photo) =>
       photo.tags.includes(activeFilter)
     );
   }
