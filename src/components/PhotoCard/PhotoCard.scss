@@ -1,0 +1,54 @@
+@use "/src/styles/partials/fonts" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/variables" as *;
+
+.PhotoCard {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary2;
+  border-radius: 1rem;
+  border: 1px solid $secondary1;
+  max-width: 25rem;
+  margin: 1rem 0;
+
+  @include tablet {
+    max-width: 40%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    max-width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    color: $primary1;
+    background-color: $secondary3;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid $secondary1;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}

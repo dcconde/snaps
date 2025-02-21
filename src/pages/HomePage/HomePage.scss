@@ -1,0 +1,39 @@
+@use "./../../styles/partials/fonts" as *;
+@use "./../../styles/partials/variables" as *;
+@use "./../../styles/partials/mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit";
+  background-color: $primary3;
+}
+
+.title {
+  font-size: 3.25rem;
+  font-weight: lighter;
+  font-style: normal;
+
+  &__i {
+    font-style: italic;
+  }
+}
+
+.container {
+  @include tablet {
+    display: flex;
+  }
+}
