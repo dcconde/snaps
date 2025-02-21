@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./PhotoList.scss";
 import Card from "../Card/Card";
@@ -39,7 +40,9 @@ function PhotoList({ activeFilter }) {
       <ul>
         {filteredPhotoList.map((photo) => (
           <li key={photo.id}>
-            <Card photo={photo} />
+            <Link to={`/photos/${photo.id}`}>
+              <Card photo={photo} />
+            </Link>
           </li>
         ))}
       </ul>
