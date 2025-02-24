@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import PhotoCard from "../../components/PhotoCard/PhotoCard";
+import Comments from "../../components/Comments/Comments";
 import Header from "../../components/Header/Header";
 import Card from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
@@ -9,7 +10,7 @@ import "./SinglePhotoPage.scss";
 
 function SinglePhotoPage() {
   const [photo, setPhoto] = useState(null);
-  // const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState([]);
   const params = useParams(); //this is the hook that returns the object the user is currently on
   const api_key = "api_key=13273d8d-5377-423f-a5e5-50a3b0904a29";
 
@@ -20,16 +21,16 @@ function SinglePhotoPage() {
     setPhoto(response.data);
   };
 
-  // const loadingComments = async () => {
-  //   const response = await axios.get(
-  //     `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}/comments?${api_key}`
-  //   );
-  //   setComments(response.data);
-  // };
+  const loadingComments = async () => {
+    const response = await axios.get(
+      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}/comments?${api_key}`
+    );
+    setComments(response.data);
+  };
 
   useEffect(() => {
     loadSinglePhoto();
-    // loadingComments();
+    loadingComments();
   }, []);
 
   if (photo === null) {
@@ -38,9 +39,10 @@ function SinglePhotoPage() {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <PhotoCard photo={photo} />
       {/* create a form and post axios request */}
+      <Comments comments={comments} />
       <Footer />
     </>
   );

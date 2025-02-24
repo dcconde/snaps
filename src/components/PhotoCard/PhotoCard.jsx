@@ -1,8 +1,9 @@
 import "./PhotoCard.scss";
+import LikeIcon from "../../assets/images/Like_Outline.svg";
 
 function PhotoCard({ photo }) {
-  //   const timestamp = new Date(photo?.timestamp);
-  //   const formattedDate = timestamp.toLocaleDateString("en-USA");
+  const timestamp = new Date(photo?.timestamp);
+  const formattedDate = timestamp.toLocaleDateString("en-US");
 
   return (
     <article className="PhotoCard">
@@ -14,10 +15,10 @@ function PhotoCard({ photo }) {
           </h3>
         ))}
         <div>
-          <img src="#" alt="Like icon" />
+          <img src={LikeIcon} alt="Like icon" />
           <p>{photo?.likes}</p>
         </div>
-        <p>{photo?.timestamp}</p>
+        <p>{formattedDate}</p>
         <h3>Photo by {photo?.photographer}</h3>
       </div>
     </article>
