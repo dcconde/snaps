@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "NewsReader";
+  src: url("/src/assets/fonts/Newsreader-Light.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "NewsReader";
+  src: url("/src/assets/fonts/Newsreader-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "NewsReader";
+  src: url("/src/assets/fonts/Newsreader-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(/src/assets/fonts/Outfit-Light.woff) format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(/src/assets/fonts/Outfit-Medium.woff) format("woff");
+  font-weight: 400;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 3.25rem;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filters-btn.closed {
+  font-family: "Outfit";
+  color: #1E6655;
+  background-color: #EFFAF7;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid #1E6655;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filters-btn.open {
+  font-family: "Outfit";
+  color: #FFFFFF;
+  background-color: #1E6655;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid #1E6655;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+  width: 0.75rem;
+  height: 0.75rem;
+}/*# sourceMappingURL=Header.css.map */

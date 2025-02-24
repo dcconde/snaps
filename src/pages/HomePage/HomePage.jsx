@@ -8,12 +8,14 @@ import "./HomePage.scss";
 function HomePage() {
   const [filterMenuIsOpen, setFilterMenuIsOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState("");
+  const [isHomePage, setIsHomePage] = useState(true);
 
   return (
     <>
       <Header
         filterMenuIsOpen={filterMenuIsOpen}
         setFilterMenuIsOpen={setFilterMenuIsOpen}
+        isHomePage={isHomePage}
       />
       <main>
         {filterMenuIsOpen && (
