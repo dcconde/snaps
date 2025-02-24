@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import filtersIcon from "../../assets/images/Filter.svg";
 
@@ -6,7 +7,9 @@ function Header({ filterMenuIsOpen, setFilterMenuIsOpen }) {
 
   return (
     <header>
-      <h1 className="title">Snaps</h1>
+      <Link to={"/"}>
+        <h1 className="title">Snaps</h1>
+      </Link>
       <div className="btn">
         <button
           className={`filters-btn ${filterMenuIsOpen ? "open" : "closed"}`}
