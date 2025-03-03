@@ -2,28 +2,38 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+Link {
+  text-decoration: none;
+}
+
 .footer__container {
   display: flex;
   flex-direction: column;
 
   @include tablet {
     flex-direction: row;
+    justify-content: flex-end;
+    gap: 3rem;
   }
 
   @include desktop {
     flex-direction: row;
+    justify-content: flex-end;
+    gap: 3rem;
   }
 }
 
 .title {
-  font-size: 3.25rem;
+  font-size: 2.5rem;
   font-weight: lighter;
   font-style: normal;
+  color: $primary1;
 }
 
 .text {
   font-family: "Outfit";
   color: $primary1;
+  font-weight: 400;
 }
 
 .logo-container {
