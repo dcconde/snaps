@@ -37,9 +37,9 @@ function PhotoList({ activeFilter }) {
   }
   return (
     <section className="photos">
-      <ul>
+      <ul className="photos__list">
         {filteredPhotoList.map((photo) => (
-          <li key={photo.id}>
+          <li className="photos__item" key={photo.id}>
             <Link className="link" to={`/photos/${photo.id}`}>
               <Card photo={photo} />
             </Link>

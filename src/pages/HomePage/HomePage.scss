@@ -27,6 +27,7 @@ body {
   &__title {
     font-weight: 300;
   }
+
   &__sub-title {
     font-family: "NewsReader";
     font-size: 2.5rem;
@@ -35,6 +36,10 @@ body {
 
     &--i {
       font-style: italic;
+    }
+
+    @include desktop {
+      max-width: 80%;
     }
   }
 }

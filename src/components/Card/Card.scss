@@ -11,18 +11,6 @@
   max-width: 25rem;
   margin: 1rem 0;
 
-  @include tablet {
-    max-width: 40%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  @include desktop {
-    max-width: 30%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   &__photo {
     width: 100%;
     max-width: 100%;
@@ -33,22 +21,21 @@
   }
 
   &__photographer {
+    margin: 0;
+    color: $primary1;
     font-size: 0.75rem;
     font-weight: 400;
+    padding: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    background-color: $secondary3;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
+}
 
-  // &__content {
-  //   padding: 0.75rem 0;
-  // }
-
-  // &__title {
-  //   font-weight: bold;
-  //   text-align: right;
-  //   background-color: white;
-  //   padding: 4px 8px;
-  //   border-radius: 8px;
-  //   display: flex;
-  // }
+.photographer-container {
+  position: relative;
 }
 
 .tags-container {

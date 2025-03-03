@@ -1,5 +1,24 @@
+@use "/src/styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .link {
   text-decoration: none;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include desktop {
+      max-width: 80%;
+    }
+  }
 }
 
 Link {

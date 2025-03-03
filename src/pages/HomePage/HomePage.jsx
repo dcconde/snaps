@@ -25,13 +25,13 @@ function HomePage() {
           />
         )}
         <h3 className="main__title">Our mission:</h3>
-        <h2 className="main__sub-title">
+        <p className="main__sub-title">
           Provide photographers a space to share photos of the naighbourhoods
           they cherish,{" "}
           <span className="main__sub-title--i">
             expressed in their unique style.
           </span>
-        </h2>
+        </p>
         <PhotoList activeFilter={activeFilter} />
       </main>
       <Footer />
