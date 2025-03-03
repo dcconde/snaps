@@ -1,3 +1,4 @@
+import { link } from "react-router-dom";
 import "./Footer.scss";
 import fbLogo from "../../assets/images/Facebook.svg";
 import instaLogo from "../../assets/images/Instagram.svg";
@@ -7,7 +8,9 @@ import pinLogo from "../../assets/images/Pinterest.svg";
 function Footer() {
   return (
     <footer>
-      <h1 className="title">Snaps</h1>
+      <Link to={"/"}>
+        <h2 className="title">Snaps</h2>
+      </Link>
       <div className="footer__container">
         <div>
           <a href="">
