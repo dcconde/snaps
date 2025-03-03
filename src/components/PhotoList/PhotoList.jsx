@@ -40,7 +40,7 @@ function PhotoList({ activeFilter }) {
       <ul>
         {filteredPhotoList.map((photo) => (
           <li key={photo.id}>
-            <Link to={`/photos/${photo.id}`}>
+            <Link className="link" to={`/photos/${photo.id}`}>
               <Card photo={photo} />
             </Link>
           </li>

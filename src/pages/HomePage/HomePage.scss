@@ -22,13 +22,19 @@ body {
   background-color: $primary3;
 }
 
-.title {
-  font-size: 3.25rem;
-  font-weight: lighter;
-  font-style: normal;
+.main {
+  &__title {
+    font-weight: 300;
+  }
+  &__sub-title {
+    font-family: "NewsReader";
+    font-size: 3.25rem;
+    font-weight: lighter;
+    font-style: normal;
 
-  &__i {
-    font-style: italic;
+    &--i {
+      font-style: italic;
+    }
   }
 }
 

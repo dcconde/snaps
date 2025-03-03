@@ -1,39 +1,39 @@
-@use "./styles/partials/fonts" as *;
-@use "./styles/partials/variables" as *;
-@use "./styles/partials/mixins" as *;
+// @use "./styles/partials/fonts" as *;
+// @use "./styles/partials/variables" as *;
+// @use "./styles/partials/mixins" as *;
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+// ul {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
 
-a {
-  text-decoration: none;
-}
+// a {
+//   text-decoration: none;
+// }
 
-body {
-  margin: 0;
-  font-family: "NewsReader";
-  background-color: $primary3;
-}
+// body {
+//   margin: 0;
+//   font-family: "NewsReader";
+//   background-color: $primary3;
+// }
 
-.title {
-  font-size: 3.25rem;
-  font-weight: lighter;
-  font-style: normal;
+// .title {
+//   font-size: 3.25rem;
+//   font-weight: lighter;
+//   font-style: normal;
 
-  &__i {
-    font-style: italic;
-  }
-}
+//   &__i {
+//     font-style: italic;
+//   }
+// }
 
-.container {
-  @include tablet {
-    display: flex;
-  }
-}
+// .container {
+//   @include tablet {
+//     display: flex;
+//   }
+// }

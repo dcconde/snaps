@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 import filtersIcon from "../../assets/images/Filter.svg";
 
-function Header({ filterMenuIsOpen, setFilterMenuIsOpen }) {
+function Header({ filterMenuIsOpen, setFilterMenuIsOpen, isHomePage }) {
   // const handleClick = (event) => console.log(event);
 
   return (
     <header>
       <Link to={"/"}>
-        <h1 className="title">Snaps</h1>
+        <h1 className="header__title">Snaps</h1>
       </Link>
       <div className="btn">
         <button

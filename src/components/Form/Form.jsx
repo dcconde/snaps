@@ -41,14 +41,23 @@ function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name <input type="text" name="name" required />
+    <form className="comment-form" onSubmit={handleSubmit}>
+      <label className="comment-form__label">
+        Name{" "}
+        <input
+          className="comment-form__input"
+          type="text"
+          name="name"
+          required
+        />
       </label>
-      <label>
-        Comment <textarea name="comment" required />
+      <label className="comment-form__label">
+        Comment{" "}
+        <textarea className="comment-form__textarea" name="comment" required />
       </label>
-      <button type="submit">Submit</button>
+      <button className="comment-form__btn" type="submit">
+        Submit
+      </button>
     </form>
   );
 }

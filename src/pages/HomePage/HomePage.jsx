@@ -24,11 +24,13 @@ function HomePage() {
             setActiveFilter={setActiveFilter}
           />
         )}
-        <h3 className="">Our mission:</h3>
-        <h2 className="title">
+        <h3 className="main__title">Our mission:</h3>
+        <h2 className="main__sub-title">
           Provide photographers a space o share photos of the naighbourhoods
           they cherish,{" "}
-          <span className="title__i">expressed in their unique style.</span>
+          <span className="main__sub-title--i">
+            expressed in their unique style.
+          </span>
         </h2>
         <PhotoList activeFilter={activeFilter} />
       </main>

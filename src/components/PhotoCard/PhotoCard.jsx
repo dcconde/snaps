@@ -4,7 +4,6 @@ import LikeIcon from "../../assets/images/Like_Outline.svg";
 function PhotoCard({ photo }) {
   const timestamp = new Date(photo?.timestamp);
   const formattedDate = timestamp.toLocaleDateString("en-US");
-
   return (
     <article className="PhotoCard">
       <img className="PhotoCard__photo" src={photo?.photo} alt="Photo" />

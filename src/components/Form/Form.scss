@@ -1,0 +1,48 @@
+@use "/src/styles/partials/fonts" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/variables" as *;
+
+.comment-form {
+  //   background-color: #eaf7f2; /* Light greenish background */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+
+  &__label {
+    font-weight: 400;
+    color: $primary1;
+  }
+
+  &__input,
+  &__textarea {
+    color: $primary1;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $secondary1;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  &__textarea {
+    height: 5 rem;
+    resize: none;
+  }
+
+  &__button {
+    background-color: $primary2;
+    color: $primary1;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: $primary2;
+    }
+  }
+}
