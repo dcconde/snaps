@@ -5,20 +5,22 @@ function PhotoCard({ photo }) {
   const timestamp = new Date(photo?.timestamp);
   const formattedDate = timestamp.toLocaleDateString("en-US");
   return (
-    <article className="PhotoCard">
-      <img className="PhotoCard__photo" src={photo?.photo} alt="Photo" />
-      <div className="PhotoCard__container">
+    <article className="photo-card">
+      <img className="photo-card__photo" src={photo?.photo} alt="Photo" />
+      <div className="photo-card__container">
         {photo?.tags.map((tag, index) => (
-          <h3 className="PhotoCard__tag" key={index}>
+          <h3 className="photo-card__tag" key={index}>
             {tag}
           </h3>
         ))}
-        <div>
+        <div className="photo-card__likes">
           <img src={LikeIcon} alt="Like icon" />
-          <p>{photo?.likes}</p>
+          <p>{photo?.likes} likes</p>
         </div>
         <p>{formattedDate}</p>
-        <h3>Photo by {photo?.photographer}</h3>
+        <h3 className="photo-card__photographer">
+          Photo by {photo?.photographer}
+        </h3>
       </div>
     </article>
   );

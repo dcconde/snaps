@@ -3,13 +3,24 @@
 @use "/src/styles/partials/variables" as *;
 
 .comment-form {
-  //   background-color: #eaf7f2; /* Light greenish background */
-  padding: 20px;
-  border-radius: 8px;
+  padding: 1.25rem 0;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
+  gap: 0.75rem;
+  max-width: auto;
+  min-width: 25rem;
+  margin: auto;
+
+  @include tablet {
+    margin: auto;
+    max-width: 60rem;
+  }
+
+  @include desktop {
+    margin: auto;
+    max-width: 60rem;
+  }
 
   &__label {
     font-weight: 400;
@@ -20,7 +31,7 @@
   &__textarea {
     color: $primary1;
     width: 100%;
-    padding: 8px;
+    padding: 0.5rem;
     border: 1px solid $secondary1;
     border-radius: 5px;
     font-size: 1rem;
@@ -31,18 +42,22 @@
     resize: none;
   }
 
-  &__button {
+  &__btn {
+    font-family: "Outfit";
+    font-size: 1rem;
+    color: $secondary3;
     background-color: $primary2;
-    color: $primary1;
+    padding: 0.25rem 0.75rem;
     border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px;
+    font-weight: 400;
+    margin-top: 0.75rem;
+    width: 25%;
 
     &:hover {
-      background-color: $primary2;
+      background-color: $secondary3;
+      color: $primary2;
     }
   }
 }
