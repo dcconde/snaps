@@ -27,7 +27,7 @@
     font-weight: 400;
     padding: 0.5rem;
     border-top-left-radius: 0.5rem;
-    background-color: $secondary3;
+    background-color: $secondary2;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -43,7 +43,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.75rem;
+  padding: 0 1rem;
 }
 
 .tag {
