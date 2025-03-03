@@ -17,6 +17,7 @@ a {
 }
 
 body {
+  padding: 0 1rem;
   margin: 0;
   font-family: "Outfit";
   background-color: $primary3;
@@ -28,7 +29,7 @@ body {
   }
   &__sub-title {
     font-family: "NewsReader";
-    font-size: 3.25rem;
+    font-size: 2.5rem;
     font-weight: lighter;
     font-style: normal;
 
