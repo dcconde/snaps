@@ -28,24 +28,26 @@ function Filters({ activeFilter, setActiveFilter }) {
 
   return (
     <section className="filters">
-      <h2 className="filters__title">Filters</h2>
-      <ul className="filters__list">
-        {filters.map((filter, index) => (
-          <li
-            className={`filters__item ${
-              activeFilter === filter ? "filters__item--active" : ""
-            }`}
-            key={index}
-            onClick={() =>
-              activeFilter === filter
-                ? setActiveFilter("")
-                : setActiveFilter(filter)
-            }
-          >
-            {filter}
-          </li>
-        ))}
-      </ul>
+      <div className="filters__container">
+        <h2 className="filters__title">Filters</h2>
+        <ul className="filters__list">
+          {filters.map((filter, index) => (
+            <li
+              className={`filters__item ${
+                activeFilter === filter ? "filters__item--active" : ""
+              }`}
+              key={index}
+              onClick={() =>
+                activeFilter === filter
+                  ? setActiveFilter("")
+                  : setActiveFilter(filter)
+              }
+            >
+              {filter}
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

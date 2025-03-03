@@ -1,4 +1,4 @@
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 import fbLogo from "../../assets/images/Facebook.svg";
 import instaLogo from "../../assets/images/Instagram.svg";
