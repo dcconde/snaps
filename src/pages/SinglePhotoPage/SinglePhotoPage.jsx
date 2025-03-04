@@ -16,14 +16,14 @@ function SinglePhotoPage() {
 
   const loadSinglePhoto = async () => {
     const response = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}?${api_key}`
+      `http://localhost:5050/photos/${params.id}`
     );
     setPhoto(response.data);
   };
 
   const loadingComments = async () => {
     const response = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}/comments?${api_key}`
+      `http://localhost:5050/photos/${params.id}/comments`
     );
     setComments(response.data);
   };

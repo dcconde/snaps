@@ -10,9 +10,7 @@ function PhotoList({ activeFilter }) {
 
   const getPhotos = async () => {
     try {
-      const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos?${api_key}`
-      );
+      const response = await axios.get(`http://localhost:5050/photos/`);
       // console.log(response.data);
       setPhotos(response.data);
     } catch (error) {

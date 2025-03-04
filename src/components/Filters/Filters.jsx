@@ -8,9 +8,7 @@ function Filters({ activeFilter, setActiveFilter }) {
 
   const getFilters = async () => {
     try {
-      const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/tags?${api_key}`
-      );
+      const response = await axios.get(`http://localhost:5050/tags`);
 
       setFilters(response.data);
     } catch (error) {

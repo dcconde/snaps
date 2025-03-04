@@ -22,7 +22,7 @@ function Form() {
 
     try {
       const response = await axios.post(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}/comments?${api_key}`,
+        `http://localhost:5050//photos/${params.id}/comments`,
         commentData
       );
 
